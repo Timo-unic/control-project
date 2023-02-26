@@ -1,4 +1,3 @@
-import AdventureHomeArticles from 'components/AdventureHome/AdventureHomeArticles'
 import AdventureHomeSection from 'components/AdventureHome/AdventureHomeSection'
 
 type Props = {}

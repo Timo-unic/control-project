@@ -1,7 +1,16 @@
 import { Grid, Typography } from '@mui/material'
 import AdventureHomeArticlesList from './AdventureHomeArticlesList'
+import articlesArray from 'utils/articlesArray'
+import './AdventureHomeSection.scss'
 
 type Props = {}
+
+type ArticleProps = {
+    title: string
+    paragraph: string
+    author: string
+    date: string
+}
 
 const AdventureHomeArticles = (props: Props) => {
     return (
@@ -10,14 +19,16 @@ const AdventureHomeArticles = (props: Props) => {
                 Lorem ipsum dolor sit amet tetur adipis icing elit
             </Typography>
             <Grid container spacing={4}>
-                <Grid item xs={12} sm={6}>
-                    {' '}
-                    <AdventureHomeArticlesList />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                    {' '}
-                    <AdventureHomeArticlesList />
-                </Grid>
+                {articlesArray.map(({title, paragraph, author, date}: ArticleProps) => (
+                    <Grid item xs={12} sm={6}>
+                        <AdventureHomeArticlesList
+                            title={title}
+                            paragraph={paragraph}
+                            author={author}
+                            date={date}
+                        />
+                    </Grid>
+                ))}
             </Grid>
         </>
     )

@@ -1,30 +1,34 @@
 import { Button, Card, CardActions, CardContent } from '@mui/material'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
+import './AdventureHomeSection.scss'
 
-type Props = {}
+type Props = {
+    title: string
+    paragraph: string
+    author: string
+    date: string
+}
 
-const AdventureHomeArticlesList = (props: Props) => {
+const AdventureHomeArticlesList = ({title, paragraph, author, date}: Props) => {
     return (
         <Card variant="outlined">
             <CardActions>
                <Button variant='outlined'>Adventures</Button> 
             </CardActions>
             <CardContent>
-                <div className="article-title">Donec tempor pur</div>
+                <div className="article-title">{title}</div>
                 <div className='article-paragraph'>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliquum.
+                    {paragraph}
                 </div>
                 <div className='article-footer'>
                     <div className='article-footer-blogger'>
                         <AccountCircleIcon color="action" />
-                        Muffin Group
+                        {author}
                     </div>
                     <div className='article-footer-date'>
                         <AccessTimeIcon />
-                        October 23, 2019
+                        {date}
                     </div>
                 </div>
             </CardContent>
