@@ -5,13 +5,6 @@ import './AdventureHomeSection.scss'
 
 type Props = {}
 
-type ArticleProps = {
-    title: string
-    paragraph: string
-    author: string
-    date: string
-}
-
 const AdventureHomeArticles = (props: Props) => {
     return (
         <>
@@ -19,13 +12,15 @@ const AdventureHomeArticles = (props: Props) => {
                 Lorem ipsum dolor sit amet tetur adipis icing elit
             </Typography>
             <Grid container spacing={4}>
-                {articlesArray.map(({title, paragraph, author, date}: ArticleProps) => (
-                    <Grid item xs={12} sm={6}>
+                {articlesArray.map(({category, title, paragraph, author, date, image}, i) => (
+                    <Grid item xs={12} sm={6} key={i}>
                         <AdventureHomeArticlesList
+                            category={category}
                             title={title}
                             paragraph={paragraph}
                             author={author}
                             date={date}
+                            image={image}
                         />
                     </Grid>
                 ))}

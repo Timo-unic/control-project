@@ -1,13 +1,15 @@
-import { Container } from "@mui/material"
-import Home from "pages/Home/Home"
+import { Container } from '@mui/material'
+import SliderSwipe from 'components/SliderSwipe/SliderSwipe'
+import Home from 'pages/Home/Home'
 
 type Props = {}
 
 const Main = (props: Props) => {
-  return (
-    <Container sx={{padding: '60px 0',}}>
-    <Home/>
-    </Container>
-  )
+    return (
+        <Container maxWidth="xl">
+            <SliderSwipe />
+            <Home />
+        </Container>
+    )
 }
 export default Main

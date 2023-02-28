@@ -1,12 +1,13 @@
+import { Container } from '@mui/material'
 import AdventureHomeSection from 'components/AdventureHome/AdventureHomeSection'
 
 type Props = {}
 
 const Home = (props: Props) => {
     return (
-        <div>
+        <Container maxWidth="lg">
             <AdventureHomeSection />
-        </div>
+        </Container>
     )
 }
 
