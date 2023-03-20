@@ -1,29 +1,30 @@
 import { Grid, Typography } from '@mui/material'
-import AdventureHomeArticlesList from './AdventureHomeArticlesList'
 import articlesArray from 'utils/articlesArray'
-import './AdventureHome.scss'
+import './PlacesHome.scss'
 import Container from '@mui/material/Container'
-import adicon from 'assets/adventure-icon.png'
+import placeicon from 'assets/home-places-icon.png'
+import PlacesHomeArticlesList from './PlacesHomeArticlesList'
+
 
 type Props = {}
 
-const AdventureHomeArticles = (props: Props) => {
+const PlacesHomeArticles = (props: Props) => {
     return (
         <>
-            <Container maxWidth="lg" className="section-article-container">
+            <Container maxWidth="lg" className="section-places-container">
                 <Typography
                     variant="h5"
                     component="div"
                     align="justify"
-                    className="section-adv-title"
+                    className="section-places-title"
                 >
                     <span>
                         {' '}
-                        <img src={adicon} alt="adicon" />
+                        <img src={placeicon} alt="placeicon" />
                     </span>
-                    <span className="section-adv-title-text">Adventures</span>
+                    <span className="section-places-title-text">Places</span>
                 </Typography>
-                <Typography variant="h3" className="section-adv-text">
+                <Typography variant="h3" className="section-places-text">
                     Lorem ipsum dolor sit amet tetur adipis icing elit
                 </Typography>
                 <Grid container spacing={4}>
@@ -36,7 +37,7 @@ const AdventureHomeArticles = (props: Props) => {
                                 author,
                                 date,
                                 image,
-                            }) => category === 'Adventures'
+                            }) => category === 'Places'
                         )
                         .map(
                             (
@@ -50,8 +51,8 @@ const AdventureHomeArticles = (props: Props) => {
                                 },
                                 i
                             ) => (
-                                <Grid item xs={12} sm={6} key={i}>
-                                    <AdventureHomeArticlesList
+                                <Grid item xs={12} sm={4} key={i}>
+                                    <PlacesHomeArticlesList
                                         category={category}
                                         title={title}
                                         paragraph={paragraph}
@@ -68,4 +69,4 @@ const AdventureHomeArticles = (props: Props) => {
     )
 }
 
-export default AdventureHomeArticles
+export default PlacesHomeArticles

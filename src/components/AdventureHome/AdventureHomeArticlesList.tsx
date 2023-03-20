@@ -1,7 +1,7 @@
 import { Button, Card, CardActions, CardContent } from '@mui/material'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
-import './AdventureHomeSection.scss'
+import './AdventureHome.scss'
 
 type Props = {
     category: string
@@ -12,30 +12,37 @@ type Props = {
     image: string
 }
 
-const AdventureHomeArticlesList = ({category, title, paragraph, author, date, image}: Props) => {
+const AdventureHomeArticlesList = ({
+    category,
+    title,
+    paragraph,
+    author,
+    date,
+    image,
+}: Props) => {
     return (
-        <Card variant="outlined">
+        <Card variant="outlined" className='article-content'>
             <CardContent>
                 <div className="article-image">
-                    <img src={image} alt=''/>
+                    <img src={image} alt="" className="article-image-style" />
                 </div>
             </CardContent>
-            <CardActions>
-               <Button variant='outlined'>{category}</Button> 
-            </CardActions>
-            <CardContent>
+            <CardContent className='article-block'>
+                <CardActions>
+                    <Button variant="outlined" className="article-btn">
+                        {category}
+                    </Button>
+                </CardActions>
                 <div className="article-title">{title}</div>
-                <div className='article-paragraph'>
-                    {paragraph}
-                </div>
-                <div className='article-footer'>
-                    <div className='article-footer-blogger'>
+                <div className="article-paragraph">{paragraph}</div>
+                <div className="article-footer">
+                    <div className="article-footer-blogger">
                         <AccountCircleIcon color="action" />
-                        {author}
+                        <span className="article-footer-style">{author}</span>
                     </div>
-                    <div className='article-footer-date'>
+                    <div className="article-footer-date">
                         <AccessTimeIcon />
-                        {date}
+                        <span className="article-footer-style">{date}</span>
                     </div>
                 </div>
             </CardContent>

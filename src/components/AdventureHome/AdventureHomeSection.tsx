@@ -1,17 +1,15 @@
-import Typography from '@mui/material/Typography'
-import adicon from 'assets/adventure-icon.png'
+import { Container } from '@mui/material'
 import AdventureHomeArticles from './AdventureHomeArticles'
-import './AdventureHomeSection.scss'
+import './AdventureHome.scss'
 
 type Props = {}
 
 const AdventureHomeSection = (props: Props) => {
-  return (
-    <>
-    <Typography variant="h5" component="div" align='justify'><img src={adicon} alt="adicon" /> Adventures</Typography>
-    <AdventureHomeArticles/>
-    </>
-  )
+    return (
+        <Container maxWidth="xl" className="section-adv-container">
+            <AdventureHomeArticles />
+        </Container>
+    )
 }
 
 export default AdventureHomeSection
