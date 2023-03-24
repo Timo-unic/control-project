@@ -1,0 +1,191 @@
+.about-title-bg {
+    background-image: url(/assets/image-about-3image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.9;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: #455241;
+    height: 650px;
+
+    .about-title {
+        color: #fff;
+        font-size: 50px;
+        line-height: 64px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        text-align: center;
+        margin: 0 auto;
+        width: 35%;
+        margin-bottom: 30px;
+    }
+    .about-title-text {
+        width: 30%;
+        text-align: center;
+        margin: 0 auto;
+        color: #fff;
+        font-size: 16px;
+    }
+}
+.about-section {
+    display: flex;
+    background-color: rgb(72, 82, 70);
+    height: 573px;
+
+    .about-section-title {
+        color: #fff;
+        font-size: 38px;
+        line-height: 47px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        width: 50%;
+        padding: 90px 120px;
+
+        .about-icon-section {
+            display: block;
+            width: 85px;
+            margin: 15px 0;
+        }
+        .about-section-text {
+            font-size: 16px;
+            line-height: 25px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            margin: 30px 0;
+            width: 90%;
+        }
+        .about-section-link {
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+    .about-image-section {
+        width: 50%;
+        height: auto;
+    }
+}
+.about-employees-container {
+    background-color: #e2e0dc;
+
+    .about-employees-container-content {
+        padding-bottom: 50px;
+
+        .about-employees-title {
+            text-align: center;
+            padding-top: 120px;
+            padding-bottom: 30px;
+            color: #504840;
+            font-size: 50px;
+            line-height: 64px;
+            font-weight: 700;
+        }
+    }
+}
+.about-employees-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: #504840;
+    background-color: #e2e0dc;
+
+    .about-employees-photo-field {
+        align-items: center;
+        margin-bottom: 15px;
+
+        .about-employees-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+    }
+    .about-employees-name {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .about-employees-line {
+        width: 130px;
+        margin: 20px 0;
+        border-top: 1px solid #504840;
+    }
+    .about-employees-textperson {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .about-employees-btn-fb,
+    .about-employees-btn-tw,
+    .about-employees-btn-in {
+        width: 43px;
+        height: 43px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #444;
+        cursor: pointer;
+        border: none;
+        background-color: #fff;
+
+        &:hover {
+            color: #ac8a62;
+        }
+    }
+}
+.about-topic-container {
+    background-color: #e2e0dc;
+    padding-bottom: 150px;
+
+    .about-topic-content {
+        display: flex;
+
+        .about-topic-leftfield {
+            width: 50%;
+            padding: 0 70px;
+            
+            .about-topic-title {
+                padding: 20px 0;
+                color: #ac8a63;
+                font-size: 38px;
+                line-height: 47px;
+                font-weight: 700;
+            }
+            .about-topic-text {
+                color: #504840;
+            }
+        }
+        .about-topic-rightfield {
+            width: 50%;
+            padding: 0 70px;
+
+            .about-topic-image {
+                width: 100%;
+                padding-bottom: 50px;
+            }
+            .about-topic-review-text {
+                color: #504840;
+                font-size: 26px;
+                line-height: 34px;
+                font-weight: 700;
+            }
+            .about-topic-review {
+                display: flex;
+
+                .about-topic-review-name {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 10px;
+                    font-weight: 700;
+                }
+                .about-topic-review-mail {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+}
+
+

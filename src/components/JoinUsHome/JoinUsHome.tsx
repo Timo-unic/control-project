@@ -1,5 +1,6 @@
 import { Button, Container, Typography } from '@mui/material'
 import joinicon from 'assets/location-joinus-icon.png'
+import footergrad from 'assets/home-gradient.png'
 import './JoinUsHome.scss'
 
 type Props = {}
@@ -17,6 +18,7 @@ const JoinUsHome = (props: Props) => {
             <Button variant="outlined" className="joinus-btn">
                 Join us today
             </Button>
+            <img src={footergrad} alt="" />
         </Container>
     )
 }

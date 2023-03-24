@@ -21,13 +21,13 @@ const AdventureHomeArticlesList = ({
     image,
 }: Props) => {
     return (
-        <Card variant="outlined" className='article-content'>
+        <Card variant="outlined" className="article-content">
             <CardContent>
                 <div className="article-image">
                     <img src={image} alt="" className="article-image-style" />
                 </div>
             </CardContent>
-            <CardContent className='article-block'>
+            <CardContent className="article-block">
                 <CardActions>
                     <Button variant="outlined" className="article-btn">
                         {category}

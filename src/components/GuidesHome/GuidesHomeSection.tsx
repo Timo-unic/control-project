@@ -5,11 +5,11 @@ import GuidesHomeArticles from './GuidesHomeArticles'
 type Props = {}
 
 const GuidesHomeSection = (props: Props) => {
-  return (
-    <Container maxWidth="xl" className="section-guides-container">
+    return (
+        <Container maxWidth="xl" className="section-guides-container">
             <GuidesHomeArticles />
         </Container>
-  )
+    )
 }
 
 export default GuidesHomeSection

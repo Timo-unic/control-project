@@ -6,8 +6,8 @@ type Props = {}
 
 const AboutHome = (props: Props) => {
     return (
-        <Typography variant="inherit" component="div" >
-            <img src={abouthead} alt="abouthead" className='about-image' />
+        <Typography variant="h5" component="div">
+            <img src={abouthead} alt="abouthead" className="about-image" />
         </Typography>
     )
 }

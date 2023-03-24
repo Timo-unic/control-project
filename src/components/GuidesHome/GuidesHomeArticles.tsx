@@ -8,8 +8,8 @@ import GuidesHomeArticlesList from './GuidesHomeArticlesList'
 type Props = {}
 
 const GuidesHomeArticles = (props: Props) => {
-  return (
-    <>
+    return (
+        <>
             <Container maxWidth="lg" className="section-guides-container">
                 <Typography
                     variant="h5"
@@ -21,7 +21,7 @@ const GuidesHomeArticles = (props: Props) => {
                         {' '}
                         <img src={guideicon} alt="guideicon" />
                     </span>
-                    <span className="section-guides-title-text">Places</span>
+                    <span className="section-guides-title-text">Guides</span>
                 </Typography>
                 <Typography variant="h3" className="section-guides-text">
                     Lorem ipsum dolor sit amet tetur adipis icing elit
@@ -65,7 +65,7 @@ const GuidesHomeArticles = (props: Props) => {
                 </Grid>
             </Container>
         </>
-  )
+    )
 }
 
 export default GuidesHomeArticles

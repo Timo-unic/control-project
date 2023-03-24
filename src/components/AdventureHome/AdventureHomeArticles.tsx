@@ -28,16 +28,7 @@ const AdventureHomeArticles = (props: Props) => {
                 </Typography>
                 <Grid container spacing={4}>
                     {articlesArray
-                        .filter(
-                            ({
-                                category,
-                                title,
-                                paragraph,
-                                author,
-                                date,
-                                image,
-                            }) => category === 'Adventures'
-                        )
+                        .filter((article) => article.category === 'Adventures')
                         .map(
                             (
                                 {

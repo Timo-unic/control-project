@@ -2,7 +2,6 @@ import { Container } from '@mui/material'
 import './PlacesHome.scss'
 import PlacesHomeArticles from './PlacesHomeArticles'
 
-
 type Props = {}
 
 const PlacesHomeSection = (props: Props) => {

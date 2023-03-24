@@ -1,16 +1,16 @@
-import Button from '@mui/material/Button'
+import MenuItem from './MenuItem'
 
 type Props = {}
 
 const Menu = (props: Props) => {
     return (
         <>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Adventures</Button>
-            <Button color="inherit">PLaces</Button>
-            <Button color="inherit">Guides</Button>
-            <Button color="inherit">Join us</Button>
+            <MenuItem to="/">Home</MenuItem>
+            <MenuItem to="/about">About</MenuItem>
+            <MenuItem to="/adventures">Adventures</MenuItem>
+            <MenuItem to="/pLaces">PLaces</MenuItem>
+            <MenuItem to="/guides">Guides</MenuItem>
+            <MenuItem to="/joinus">Join us</MenuItem>
         </>
     )
 }

@@ -5,7 +5,6 @@ import Container from '@mui/material/Container'
 import placeicon from 'assets/home-places-icon.png'
 import PlacesHomeArticlesList from './PlacesHomeArticlesList'
 
-
 type Props = {}
 
 const PlacesHomeArticles = (props: Props) => {
