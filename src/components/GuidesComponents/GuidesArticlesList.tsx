@@ -4,24 +4,24 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import './GuidesHome.scss'
 
 type Props = {
-  category: string
-  title: string
-  paragraph: string
-  author: string
-  date: string
-  image: string
+    category: string
+    title: string
+    paragraph: string
+    author: string
+    date: string
+    image: string
 }
 
 const GuidesArticlesList = ({
-  category,
-  title,
-  paragraph,
-  author,
-  date,
-  image,
+    category,
+    title,
+    paragraph,
+    author,
+    date,
+    image,
 }: Props) => {
-  return (
-    <Card variant="outlined" className="guides-article-content">
+    return (
+        <Card variant="outlined" className="guides-article-content">
             <CardContent>
                 <div className="guides-image">
                     <img src={image} alt="" className="guides-image-style" />
@@ -47,7 +47,7 @@ const GuidesArticlesList = ({
                 </div>
             </CardContent>
         </Card>
-  )
+    )
 }
 
 export default GuidesArticlesList

@@ -7,14 +7,10 @@ type Props = {}
 const Places = (props: Props) => {
     return (
         <Container maxWidth="xl" className="category-container">
-            <Typography
-                variant="h1"
-                component="div"
-                className="category-title"
-            >
+            <Typography variant="h1" component="div" className="category-title">
                 Places
             </Typography>
-            <PlacesArticles/>
+            <PlacesArticles />
         </Container>
     )
 }

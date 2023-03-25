@@ -8,7 +8,7 @@ const JoinUs = (props: Props) => {
     return (
         <>
             <Container maxWidth="xl" className="joinus-title-bg">
-                <Container >
+                <Container>
                     <div className="joinus-title-content">
                         <div className="joinus-title">
                             <p>
@@ -30,22 +30,24 @@ const JoinUs = (props: Props) => {
                 </Container>
             </Container>
             <Container maxWidth="xl" className="joinus-main-bg">
-            <img src={joinusgrad} alt="" className='joinus-main-bg-grad'/>
+                <img src={joinusgrad} alt="" className="joinus-main-bg-grad" />
                 <Container>
-                    <div className='joinus-main-submit'>
-                        <div className='joinus-main-submit-title'>
+                    <div className="joinus-main-submit">
+                        <div className="joinus-main-submit-title">
                             Lorem ipsum dolor sit amet tetur
-                            <div className='joinus-main-submit-text'>
+                            <div className="joinus-main-submit-text">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit, sed do eiusmod tempor
                                 incididunt ut labor
                             </div>
                         </div>
-                        <div className='joinus-main-submit-form'>form submit</div>
+                        <div className="joinus-main-submit-form">
+                            form submit
+                        </div>
                     </div>
-                    <div className='joinus-main-useful'>
-                        <div className='joinus-main-info'>Useful info</div>
-                        <div className='joinus-main-contacts'>Contact us</div>
+                    <div className="joinus-main-useful">
+                        <div className="joinus-main-info">Useful info</div>
+                        <div className="joinus-main-contacts">Contact us</div>
                     </div>
                 </Container>
             </Container>
