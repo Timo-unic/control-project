@@ -18,7 +18,6 @@ const AdventureHomeArticles = (props: Props) => {
                     className="section-adv-title"
                 >
                     <span>
-                        {' '}
                         <img src={adicon} alt="adicon" />
                     </span>
                     <span className="section-adv-title-text">Adventures</span>

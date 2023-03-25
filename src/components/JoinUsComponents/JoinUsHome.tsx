@@ -9,7 +9,6 @@ const JoinUsHome = (props: Props) => {
     return (
         <Container maxWidth="xl" className="joinus-section">
             <Typography variant="h3" component="div">
-                {' '}
                 <img src={joinicon} alt="joinicon" className="joinus-icon" />
                 <div className="joinus-text">
                     Lorem ipsum dolor sit amet tetur adipis icing elit

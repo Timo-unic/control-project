@@ -7,7 +7,10 @@ import { Route, Routes } from 'react-router-dom'
 import Home from 'pages/Home/Home'
 import { Container } from '@mui/material'
 import About from 'pages/About/About'
-import BackToTopButton from 'components/BackToTop/BackToTopButton'
+import Adventures from 'pages/Adventures/Adventures'
+import Places from 'pages/Places/Places'
+import Guides from 'pages/Guides/Guides'
+import JoinUs from 'pages/JoinUs/JoinUs'
 
 type Props = {}
 
@@ -27,10 +30,13 @@ const App = (props: Props) => {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="about" element={<About />} />
+                        <Route path="adventures" element={<Adventures />} />
+                        <Route path="pLaces" element={<Places />} />
+                        <Route path="guides" element={<Guides />} />
+                        <Route path="joinus" element={<JoinUs />} />
                     </Routes>
                 </Container>
                 <Footer />
-                
             </ThemeProvider>
         </StyledEngineProvider>
     )

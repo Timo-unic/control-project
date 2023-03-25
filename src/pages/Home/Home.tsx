@@ -1,10 +1,10 @@
 import { Container } from '@mui/material'
 import SliderSwipe from 'components/SliderSwipe/SliderSwipe'
-import AboutHome from 'components/AboutHome/AboutHome'
-import AdventureHomeSection from 'components/AdventureHome/AdventureHomeSection'
-import GuidesHomeSection from 'components/GuidesHome/GuidesHomeSection'
-import JoinUsHome from 'components/JoinUsHome/JoinUsHome'
-import PlacesHomeSection from 'components/PlacesHome/PlacesHomeSection'
+import AboutHome from 'components/AboutCopmonents/AboutHome'
+import AdventureHomeSection from 'components/AdventureComponents/AdventureHomeSection'
+import GuidesHomeSection from 'components/GuidesComponents/GuidesHomeSection'
+import JoinUsHome from 'components/JoinUsComponents/JoinUsHome'
+import PlacesHomeSection from 'components/PlacesComponents/PlacesHomeSection'
 import './Home.scss'
 
 type Props = {}
