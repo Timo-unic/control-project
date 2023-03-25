@@ -41,6 +41,7 @@
     }
     .joinus-main-submit {
         display: flex;
+        margin-bottom: 70px;
 
         .joinus-main-submit-title {
             color: #fff;
@@ -61,9 +62,52 @@
     }
     .joinus-main-useful {
         display: flex;
-        color: #fff;
-        font-size: 50px;
-        line-height: 64px;
+        color: #ac8a63;
+        font: inherit;
+        vertical-align: baseline;
         font-weight: 700;
+        width: 100%;
+        padding-bottom: 100px;
+
+        .joinus-main-info {
+            margin-right: 100px;
+
+            .joinus-main-info-title {
+                color: #fff;
+                font-size: 50px;
+                line-height: 64px;
+                margin-bottom: 30px;
+            }
+            .joinus-main-info-item {
+                display: flex;
+                align-items: center;
+                padding: 10px 0;
+
+                .joinus-main-useful-text {
+                    display: inline-block;
+                    margin-left: 15px;
+                } 
+            }
+        }
+        .joinus-main-contacts {
+            margin-right: 100px;
+            margin-left: 100px;
+
+            .joinus-main-contacts-title {
+                color: #fff;
+                font-size: 50px;
+                line-height: 64px;
+                margin-bottom: 30px;
+            }
+            .joinus-main-contacts-text {
+                color: #fff;
+                font-weight: initial;
+                padding: 0 100px 30px 0;
+            }
+            .joinus-main-contacts-icon {
+                display: flex;
+                margin: 15px 0;
+            }    
+        }
     }
 }
