@@ -19,7 +19,9 @@ const AdventureHomeSection = (props: Props) => {
                             className="instagram-image"
                         />
                     </div>
-                    <Link to="/about" className='instagram-link'>Instagram</Link>
+                    <Link to="/about" className="instagram-link">
+                        Instagram
+                    </Link>
                 </div>
                 <div className="twitter-content">
                     <div>
@@ -29,7 +31,9 @@ const AdventureHomeSection = (props: Props) => {
                             className="twitter-image"
                         />
                     </div>
-                    <Link to="/about" className='twitter-link'>Twitter</Link>
+                    <Link to="/about" className="twitter-link">
+                        Twitter
+                    </Link>
                 </div>
             </div>
             <AdventureHomeArticles />
