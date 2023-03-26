@@ -2,6 +2,7 @@ import { Button, Container, Typography } from '@mui/material'
 import joinicon from 'assets/location-joinus-icon.png'
 import footergrad from 'assets/home-gradient.png'
 import './JoinUsHome.scss'
+import { Link } from 'react-router-dom'
 
 type Props = {}
 
@@ -15,7 +16,9 @@ const JoinUsHome = (props: Props) => {
                 </div>
             </Typography>
             <Button variant="outlined" className="joinus-btn">
-                Join us today
+                <Link to="/joinus" className="joinus-btn-link">
+                    Join us today
+                </Link>
             </Button>
             <img src={footergrad} alt="" />
         </Container>

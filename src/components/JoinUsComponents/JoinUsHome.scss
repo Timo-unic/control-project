@@ -18,9 +18,14 @@
 }
 .joinus-btn {
     background-color: #ac8a62;
-    color: #ffffff;
+    
     font-size: 120%;
     padding: 15px 40px;
     border: none;
     margin-bottom: 400px;
+
+    .joinus-btn-link {
+        text-decoration: none;
+        color: #ffffff;
+    }
 }

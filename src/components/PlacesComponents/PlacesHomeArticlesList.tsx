@@ -2,6 +2,7 @@ import { Button, Card, CardActions, CardContent } from '@mui/material'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import './PlacesHome.scss'
+import { Link } from 'react-router-dom'
 
 type Props = {
     category: string
@@ -30,7 +31,9 @@ const PlacesHomeArticlesList = ({
             <CardContent className="places-block">
                 <CardActions>
                     <Button variant="outlined" className="places-btn">
-                        {category}
+                        <Link to="/places" className="places-btn-link">
+                            {category}
+                        </Link>
                     </Button>
                 </CardActions>
                 <div className="places-title">{title}</div>

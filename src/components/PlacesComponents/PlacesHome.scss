@@ -39,6 +39,15 @@
     color: rgba(0,0,0,.6);
     background-color: rgba(0,0,0,.05);
     border-color: rgba(0,0,0,.6);
+
+    .places-btn-link {
+        text-decoration: none;
+        color: rgba(0,0,0,.6);
+
+        &:hover {
+            color: rgba(0,0,0,.8);
+        }
+    }
 }
 .places-title {
     font-size: 28px;

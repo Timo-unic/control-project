@@ -55,9 +55,17 @@
     border-radius: 20px;
     margin: 10px;
     padding: 3px 12px;
-    color: rgba(255,255,255,.6);
     background-color: rgba(255,255,255,.1);
     border-color: rgba(255,255,255,.6);
+
+    .article-btn-link {
+        text-decoration: none;
+        color: rgba(255,255,255,.6);
+
+        &:hover {
+            color: #fff;
+        }
+    }    
 }
 .article-title {
     font-size: 26px;
@@ -91,6 +99,33 @@
         margin: 0 5px;
     }
 }
+.social-content {
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px 400px 0;
 
+    .twitter-content,
+    .instagram-content {
+        
+        margin: 0 20px;
+        display: flex;
+
+        .twitter-image,
+        .instagram-image {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        .instagram-link,
+        .twitter-link {
+            text-decoration: none;
+            color: rgba(240, 238, 235, 0.62);
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
 
 

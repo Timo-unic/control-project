@@ -1,5 +1,4 @@
 import { Card, CardActions, CardContent } from '@mui/material'
-import TwittIcon from 'assets/twitter_social_icon.svg'
 import TwitterIcon from '@mui/icons-material/Twitter'
 
 type Props = {
