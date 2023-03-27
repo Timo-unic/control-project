@@ -5,6 +5,7 @@ import './GuidesHome.scss'
 import { Link } from 'react-router-dom'
 
 type Props = {
+    id: number
     category: string
     title: string
     paragraph: string
@@ -14,6 +15,7 @@ type Props = {
 }
 
 const GuidesHomeArticlesList = ({
+    id,
     category,
     title,
     paragraph,
@@ -21,6 +23,14 @@ const GuidesHomeArticlesList = ({
     date,
     image,
 }: Props) => {
+
+    const scrollUp = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
+    }
+
     return (
         <Card variant="outlined" className="guides-content">
             <CardContent>
@@ -30,18 +40,30 @@ const GuidesHomeArticlesList = ({
             </CardContent>
             <CardContent className="guides-block">
                 <CardActions>
-                    <Button variant="outlined" className="guides-btn">
+                    <Button variant="outlined" className="guides-btn" onClick={scrollUp}>
                         <Link to="/guides" className="guides-btn-link">
                             {category}
                         </Link>
                     </Button>
                 </CardActions>
-                <div className="guides-title">{title}</div>
+                <div className="guides-title">
+                    <Link to={`/articles/${id}`} className="guides-title-link" onClick={scrollUp}>
+                        {title}
+                    </Link>
+                </div>
                 <div className="guides-paragraph">{paragraph}</div>
                 <div className="guides-footer">
                     <div className="guides-footer-blogger">
                         <AccountCircleIcon color="action" />
-                        <span className="guides-footer-style">{author}</span>
+                        <span className="guides-footer-style">
+                            <Link
+                                to={`/author/muffin`}
+                                className="group-muffin-link"
+                                onClick={scrollUp}
+                            >
+                                {author}
+                            </Link>
+                        </span>
                     </div>
                     <div className="guides-footer-date">
                         <AccessTimeIcon />

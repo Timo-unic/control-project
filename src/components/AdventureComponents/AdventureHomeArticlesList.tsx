@@ -5,6 +5,7 @@ import './AdventureHome.scss'
 import { Link } from 'react-router-dom'
 
 type Props = {
+    id: number
     category: string
     title: string
     paragraph: string
@@ -14,6 +15,7 @@ type Props = {
 }
 
 const AdventureHomeArticlesList = ({
+    id,
     category,
     title,
     paragraph,
@@ -21,6 +23,14 @@ const AdventureHomeArticlesList = ({
     date,
     image,
 }: Props) => {
+
+    const scrollUp = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
+    }
+
     return (
         <Card variant="outlined" className="article-content">
             <CardContent>
@@ -30,18 +40,29 @@ const AdventureHomeArticlesList = ({
             </CardContent>
             <CardContent className="article-block">
                 <CardActions>
-                    <Button variant="outlined" className="article-btn">
+                    <Button variant="outlined" className="article-btn" onClick={scrollUp}>
                         <Link to="/adventures" className="article-btn-link">
                             {category}
                         </Link>
                     </Button>
                 </CardActions>
-                <div className="article-title">{title}</div>
+                <div className="article-title">
+                    <Link to={`/articles/${id}`} className="article-title-link" onClick={scrollUp}>
+                        {title}
+                    </Link>
+                </div>
                 <div className="article-paragraph">{paragraph}</div>
                 <div className="article-footer">
                     <div className="article-footer-blogger">
                         <AccountCircleIcon color="action" />
-                        <span className="article-footer-style">{author}</span>
+                        <span className="article-footer-style">
+                            <Link
+                                to={`/author/muffin`}
+                                className="group-muffin-link" onClick={scrollUp}
+                            >
+                                {author}
+                            </Link>
+                        </span>
                     </div>
                     <div className="article-footer-date">
                         <AccessTimeIcon />

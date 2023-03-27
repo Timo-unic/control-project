@@ -1,0 +1,32 @@
+.category-container {
+    background-color: #e2e0dc;
+
+    .category-title {
+        background-image: url(/assets/subheader-bg.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        color: #e2e0dc;
+        font-size: 60px;
+        line-height: 60px;
+        font-weight: 700;
+        padding: 150px 0 200px 0;
+        text-align: center;
+    }
+    .category-article-container {
+        padding-top: 15px;
+        padding-bottom: 300px;
+    }
+}
+.adventures-article-content {
+    position: relative;
+    overflow: visible;
+}
+.adventures-article-block {
+    background-color: #505b4e;
+    position: absolute;
+    width: 80%;
+    top: 85%;
+    left: 10%;
+    z-index: 2;
+}

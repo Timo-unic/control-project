@@ -30,6 +30,7 @@ const PlacesHomeArticles = (props: Props) => {
                     {articlesArray
                         .filter(
                             ({
+                                id,
                                 category,
                                 title,
                                 paragraph,
@@ -41,6 +42,7 @@ const PlacesHomeArticles = (props: Props) => {
                         .map(
                             (
                                 {
+                                    id,
                                     category,
                                     title,
                                     paragraph,
@@ -52,6 +54,7 @@ const PlacesHomeArticles = (props: Props) => {
                             ) => (
                                 <Grid item xs={12} sm={4} key={i}>
                                     <PlacesHomeArticlesList
+                                        id={id}
                                         category={category}
                                         title={title}
                                         paragraph={paragraph}

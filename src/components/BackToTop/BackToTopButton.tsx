@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { brown } from '@mui/material/colors';
 
 type Props = {}
 

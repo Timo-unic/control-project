@@ -1,0 +1,110 @@
+.article-content-title-bg {
+    background-image: url(/assets/image-group-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.9;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: #455241;
+    height: 650px;
+
+    .article-content-title {
+        color: #fff;
+        font-size: 50px;
+        line-height: 64px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        text-align: center;
+        margin: 0 auto;
+        width: 35%;
+        margin-bottom: 30px;
+    }
+    .article-content-title-text {
+        width: 30%;
+        text-align: center;
+        margin: 0 auto;
+        color: #fff;
+        font-size: 16px;
+    }
+}
+.article-content-slogan {
+    display: flex;
+
+    .article-content-slogan-text {
+        color: #fff;
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 600;
+        letter-spacing: 0px;
+        padding: 80px 20%;
+        text-align: center;
+    }
+}
+.article-content-fieldone {
+    padding-top: 25px;
+    padding-bottom: 40px;
+    background-color: #d0ccc3;
+    text-align: center;
+    font-size: 28px;
+    line-height: 25px;
+    font-weight: 600;
+
+    .article-content-title {
+        padding: 25px;
+    }
+    
+    .article-content-fieldone-title {
+        color: #504840;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 600;
+        text-align: left;
+        padding-bottom: 15px;
+    }
+    .article-content-fieldone-text,
+    .article-content-fieldtwo-text {
+        color: #504840;
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 300;
+        text-align: left;
+    }
+}
+.article-content-fieldtwo {
+    padding-top: 55px;
+    padding-bottom: 40px;
+    background-color: #e2e0dc;
+
+    .article-content-fieldtwo-title {
+        color: #504840;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 600;
+        text-align: left;
+        padding-bottom: 15px;
+    }
+}    
+.article-content-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .article-content-image{
+        width: 75%;
+        height: auto;
+        padding: 50px;
+    }
+    .article-content-footer-text {
+        width: 40%;
+        padding-bottom: 70px;
+    }
+    .article-content-footer-icon {
+        position: absolute;
+        left: 400px;
+        bottom: 170px;
+    }
+}

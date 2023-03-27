@@ -11,6 +11,8 @@ import Adventures from 'pages/Adventures/Adventures'
 import Places from 'pages/Places/Places'
 import Guides from 'pages/Guides/Guides'
 import JoinUs from 'pages/JoinUs/JoinUs'
+import ArticlePage from 'pages/Article/ArticlePage'
+import GroupMuffin from 'pages/Group/GroupMuffin'
 
 type Props = {}
 
@@ -34,6 +36,8 @@ const App = (props: Props) => {
                         <Route path="pLaces" element={<Places />} />
                         <Route path="guides" element={<Guides />} />
                         <Route path="joinus" element={<JoinUs />} />
+                        <Route path="/articles/:id" element={<ArticlePage />} />
+                        <Route path='/author/muffin' element={<GroupMuffin/>} />
                     </Routes>
                 </Container>
                 <Footer />

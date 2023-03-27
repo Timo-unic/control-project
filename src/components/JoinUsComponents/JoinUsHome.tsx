@@ -7,6 +7,12 @@ import { Link } from 'react-router-dom'
 type Props = {}
 
 const JoinUsHome = (props: Props) => {
+    const scrollUp = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
+    }
     return (
         <Container maxWidth="xl" className="joinus-section">
             <Typography variant="h3" component="div">
@@ -15,7 +21,7 @@ const JoinUsHome = (props: Props) => {
                     Lorem ipsum dolor sit amet tetur adipis icing elit
                 </div>
             </Typography>
-            <Button variant="outlined" className="joinus-btn">
+            <Button variant="outlined" onClick={scrollUp} className="joinus-btn">
                 <Link to="/joinus" className="joinus-btn-link">
                     Join us today
                 </Link>

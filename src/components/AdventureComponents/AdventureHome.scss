@@ -13,6 +13,35 @@
         }
     }
 }
+.social-content {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 300px 0;
+
+    .twitter-content,
+    .instagram-content {
+        
+        margin: 0 20px;
+        display: flex;
+
+        .twitter-image,
+        .instagram-image {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        .instagram-link,
+        .twitter-link {
+            text-decoration: none;
+            color: rgba(240, 238, 235, 0.62);
+
+            &:hover {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+    }
+}
 .section-adv-title {
     width: 70%;
     color: #fff;
@@ -63,17 +92,25 @@
         color: rgba(255,255,255,.6);
 
         &:hover {
-            color: #fff;
+            color: rgba(255,255,255,.8);
         }
     }    
 }
 .article-title {
     font-size: 26px;
     font-weight: 700;
-    color: #FFFF;
     letter-spacing: 0px;
     padding: 0 20px;
     margin-bottom: 15px;
+
+    .article-title-link {
+        text-decoration: none;
+        color: #FFFF;
+
+        &:hover {
+            color: #DEDEDE;
+        }
+    }
 }
 .article-paragraph {
     color: rgba(255,255,255,.8);
@@ -88,7 +125,16 @@
     .article-footer-blogger {
         display: flex;
         align-items: center;
-        color: #ac8a62;
+        
+        .group-muffin-link {
+            text-decoration: none;
+            color: #ac8a62;
+
+            &:hover {
+                color: #a97e4d;
+                text-decoration: underline;
+            }
+        }
     }
     .article-footer-date {
         display: flex;
@@ -99,33 +145,6 @@
         margin: 0 5px;
     }
 }
-.social-content {
-    display: flex;
-    justify-content: flex-end;
-    padding: 30px 300px 0;
 
-    .twitter-content,
-    .instagram-content {
-        
-        margin: 0 20px;
-        display: flex;
-
-        .twitter-image,
-        .instagram-image {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-        }
-        .instagram-link,
-        .twitter-link {
-            text-decoration: none;
-            color: rgba(240, 238, 235, 0.62);
-
-            &:hover {
-                color: #fff;
-            }
-        }
-    }
-}
 
 

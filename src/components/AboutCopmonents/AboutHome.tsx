@@ -1,4 +1,4 @@
-import { Container, Typography } from '@mui/material'
+import { Container } from '@mui/material'
 import minilady from 'assets/home-mini-lady.png'
 import './AboutHome.scss'
 

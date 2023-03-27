@@ -51,10 +51,18 @@
 .guides-title {
     font-size: 28px;
     font-weight: 700;
-    color: #504840;
     letter-spacing: 0px;
     padding: 0 30px;
     margin-bottom: 15px;
+
+    .guides-title-link {
+        text-decoration: none;
+        color: #504840;
+
+        &:hover {
+            color: #695f55;
+        }
+    }
 }
 .guides-paragraph {
     color: #504840;
@@ -69,7 +77,16 @@
     .guides-footer-blogger {
         display: flex;
         align-items: center;
-        color: #ac8a62;
+
+        .group-muffin-link {
+            text-decoration: none;
+            color: #ac8a62;
+
+            &:hover {
+                color: #a97e4d;
+                text-decoration: underline;
+            }
+        }
     }
     .guides-footer-date {
         display: flex;

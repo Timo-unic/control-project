@@ -2,8 +2,10 @@ import { Button, Card, CardActions, CardContent } from '@mui/material'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import './PlacesHome.scss'
+import { Link } from 'react-router-dom'
 
 type Props = {
+    id: number
     category: string
     title: string
     paragraph: string
@@ -13,6 +15,7 @@ type Props = {
 }
 
 const PlacesArticlesList = ({
+    id,
     category,
     title,
     paragraph,
@@ -20,6 +23,14 @@ const PlacesArticlesList = ({
     date,
     image,
 }: Props) => {
+
+    const scrollUp = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
+    }
+
     return (
         <Card variant="outlined" className="places-article-content">
             <CardContent>
@@ -29,16 +40,30 @@ const PlacesArticlesList = ({
             </CardContent>
             <CardContent className="places-article-block">
                 <CardActions>
-                    <Button variant="outlined" className="places-btn">
-                        {category}
+                    <Button variant="outlined" className="places-btn" onClick={scrollUp}>
+                        <Link to="/places" className="places-btn-link">
+                            {category}
+                        </Link>
                     </Button>
                 </CardActions>
-                <div className="places-title">{title}</div>
+                <div className="places-title">
+                    <Link to={`/articles/${id}`} className="places-title-link" onClick={scrollUp}>
+                        {title}
+                    </Link>
+                </div>
                 <div className="places-paragraph">{paragraph}</div>
                 <div className="places-footer">
                     <div className="places-footer-blogger">
                         <AccountCircleIcon color="action" />
-                        <span className="places-footer-style">{author}</span>
+                        <span className="places-footer-style">
+                            <Link
+                                to={`/author/muffin`}
+                                className="group-muffin-link"
+                                onClick={scrollUp}
+                            >
+                                {author}
+                            </Link>
+                        </span>
                     </div>
                     <div className="places-footer-date">
                         <AccessTimeIcon />
