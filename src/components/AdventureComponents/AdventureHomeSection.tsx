@@ -8,7 +8,6 @@ import twitter from 'assets/twitter-logo.svg'
 type Props = {}
 
 const AdventureHomeSection = (props: Props) => {
-
     const scrollUp = () => {
         window.scrollTo({
             top: 0,
@@ -34,7 +33,11 @@ const AdventureHomeSection = (props: Props) => {
                             className="instagram-image"
                         />
                     </div>
-                    <Link to="/about" className="instagram-link" onClick={scrollToSocial}>
+                    <Link
+                        to="/about"
+                        className="instagram-link"
+                        onClick={scrollToSocial}
+                    >
                         Instagram
                     </Link>
                 </div>
@@ -46,14 +49,22 @@ const AdventureHomeSection = (props: Props) => {
                             className="twitter-image"
                         />
                     </div>
-                    <Link to="/about" className="twitter-link" onClick={scrollToSocial}>
+                    <Link
+                        to="/about"
+                        className="twitter-link"
+                        onClick={scrollToSocial}
+                    >
                         Twitter
                     </Link>
                 </div>
             </div>
             <AdventureHomeArticles />
             <div className="section-adv-home-link">
-                <Link to="/adventures" className="section-adv-home-link-style" onClick={scrollUp}>
+                <Link
+                    to="/adventures"
+                    className="section-adv-home-link-style"
+                    onClick={scrollUp}
+                >
                     Discover more
                 </Link>
             </div>

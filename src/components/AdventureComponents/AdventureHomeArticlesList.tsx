@@ -3,6 +3,10 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import './AdventureHome.scss'
 import { Link } from 'react-router-dom'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { addLike, removeLike } from 'redux/likeReducer'
 
 type Props = {
     id: number
@@ -23,7 +27,6 @@ const AdventureHomeArticlesList = ({
     date,
     image,
 }: Props) => {
-
     const scrollUp = () => {
         window.scrollTo({
             top: 0,
@@ -31,23 +34,49 @@ const AdventureHomeArticlesList = ({
         })
     }
 
+    const isLiked = useAppSelector((state) => state.articlesLikeState[id])
+    const dispatch = useAppDispatch()
+
     return (
         <Card variant="outlined" className="article-content">
             <CardContent>
                 <div className="article-image">
+                    <Button
+                        variant="outlined"
+                        className="article-image-likebtn"
+                        onClick={() =>
+                            isLiked
+                                ? dispatch(removeLike(id))
+                                : dispatch(addLike(id))
+                        }
+                    >
+                        {isLiked ? (
+                            <FavoriteIcon sx={{ color: 'white' }} />
+                        ) : (
+                            <FavoriteBorderIcon sx={{ color: 'white' }} />
+                        )}
+                    </Button>
                     <img src={image} alt="" className="article-image-style" />
                 </div>
             </CardContent>
             <CardContent className="article-block">
                 <CardActions>
-                    <Button variant="outlined" className="article-btn" onClick={scrollUp}>
+                    <Button
+                        variant="outlined"
+                        className="article-btn"
+                        onClick={scrollUp}
+                    >
                         <Link to="/adventures" className="article-btn-link">
                             {category}
                         </Link>
                     </Button>
                 </CardActions>
                 <div className="article-title">
-                    <Link to={`/articles/${id}`} className="article-title-link" onClick={scrollUp}>
+                    <Link
+                        to={`/articles/${id}`}
+                        className="article-title-link"
+                        onClick={scrollUp}
+                    >
                         {title}
                     </Link>
                 </div>
@@ -58,7 +87,8 @@ const AdventureHomeArticlesList = ({
                         <span className="article-footer-style">
                             <Link
                                 to={`/author/muffin`}
-                                className="group-muffin-link" onClick={scrollUp}
+                                className="group-muffin-link"
+                                onClick={scrollUp}
                             >
                                 {author}
                             </Link>

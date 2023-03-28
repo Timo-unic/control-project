@@ -21,7 +21,11 @@ const JoinUsHome = (props: Props) => {
                     Lorem ipsum dolor sit amet tetur adipis icing elit
                 </div>
             </Typography>
-            <Button variant="outlined" onClick={scrollUp} className="joinus-btn">
+            <Button
+                variant="outlined"
+                onClick={scrollUp}
+                className="joinus-btn"
+            >
                 <Link to="/joinus" className="joinus-btn-link">
                     Join us today
                 </Link>

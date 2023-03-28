@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
+import './BackToTopButton.scss'
 
 type Props = {}
 
@@ -26,19 +27,10 @@ const BackToTopButton = (props: Props) => {
     return (
         <div>
             {backToTopButton && (
-                <button
-                    style={{
-                        position: 'fixed',
-                        bottom: '50px',
-                        right: '50px',
-                        // height: '40px',
-                        // width: '50px',
-                        // fontSize: "30px",
-                    }}
+                <KeyboardArrowUpIcon
+                    className="arrowupicon"
                     onClick={scrollUp}
-                >
-                    <KeyboardArrowUpIcon sx={{color: 'chocolate', fontSize: "50px"}} />
-                </button>
+                />
             )}
         </div>
     )

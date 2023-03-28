@@ -13,7 +13,7 @@ type Props = {
 const ArticlePage = ({
     articlesObject = getArticlesObject(articlesArray),
 }: Props) => {
-    const {  id } = useParams()
+    const { id } = useParams()
 
     return (
         <Container maxWidth="xl">
@@ -72,8 +72,12 @@ const ArticlePage = ({
                         alt="single-gallery"
                         className="article-content-image"
                     />
-                    <img src={articleicon} alt="articleicon" className='article-content-footer-icon' />
-                    <div className='article-content-footer-text'>
+                    <img
+                        src={articleicon}
+                        alt="articleicon"
+                        className="article-content-footer-icon"
+                    />
+                    <div className="article-content-footer-text">
                         Sed ut perspiciatis unde omnis iste natus error sit
                         voluptatem accusantium doloremque laudantium, totam rem
                         aperiam, eaque ipsa quae ab illo inventore veritatis et

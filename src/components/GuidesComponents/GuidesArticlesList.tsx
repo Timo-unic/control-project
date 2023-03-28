@@ -3,6 +3,10 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import './GuidesHome.scss'
 import { Link } from 'react-router-dom'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { addLike, removeLike } from 'redux/likeReducer'
 
 type Props = {
     id: number
@@ -23,7 +27,6 @@ const GuidesArticlesList = ({
     date,
     image,
 }: Props) => {
-
     const scrollUp = () => {
         window.scrollTo({
             top: 0,
@@ -31,23 +34,50 @@ const GuidesArticlesList = ({
         })
     }
 
+    const isLiked = useAppSelector((state) => state.articlesLikeState[id])
+
+    const dispatch = useAppDispatch()
+
     return (
         <Card variant="outlined" className="guides-article-content">
             <CardContent>
                 <div className="guides-image">
+                    <Button
+                        variant="outlined"
+                        className="article-image-likebtn"
+                        onClick={() =>
+                            isLiked
+                                ? dispatch(removeLike(id))
+                                : dispatch(addLike(id))
+                        }
+                    >
+                        {isLiked ? (
+                            <FavoriteIcon sx={{ color: 'white' }} />
+                        ) : (
+                            <FavoriteBorderIcon sx={{ color: 'white' }} />
+                        )}
+                    </Button>
                     <img src={image} alt="" className="guides-image-style" />
                 </div>
             </CardContent>
             <CardContent className="guides-article-block">
                 <CardActions>
-                    <Button variant="outlined" className="guides-btn" onClick={scrollUp}>
+                    <Button
+                        variant="outlined"
+                        className="guides-btn"
+                        onClick={scrollUp}
+                    >
                         <Link to="/guides" className="guides-btn-link">
                             {category}
                         </Link>
                     </Button>
                 </CardActions>
                 <div className="guides-title">
-                    <Link to={`/articles/${id}`} className="guides-title-link" onClick={scrollUp}>
+                    <Link
+                        to={`/articles/${id}`}
+                        className="guides-title-link"
+                        onClick={scrollUp}
+                    >
                         {title}
                     </Link>
                 </div>

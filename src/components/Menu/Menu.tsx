@@ -1,4 +1,5 @@
 import MenuItem from './MenuItem'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 
 type Props = {}
 
@@ -11,6 +12,9 @@ const Menu = (props: Props) => {
             <MenuItem to="/pLaces">PLaces</MenuItem>
             <MenuItem to="/guides">Guides</MenuItem>
             <MenuItem to="/joinus">Join us</MenuItem>
+            <MenuItem to="/favorits">
+                <FavoriteBorderIcon />
+            </MenuItem>
         </>
     )
 }

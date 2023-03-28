@@ -33,7 +33,7 @@ const Footer = (props: Props) => {
                     </div>
                 </div>
             </Typography>
-            <BackToTopButton/>
+            <BackToTopButton />
         </>
     )
 }

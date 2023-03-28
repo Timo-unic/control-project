@@ -68,10 +68,30 @@
     position: relative;
     overflow: visible;
 }
-.article-image-style {
-    width: 100%;
-    height: auto;
+.article-image {
+    position: relative;
+   
+    &:hover {
+        transition: all .3s ease-in-out;
+        transform: scale(1.1);
+    }
+
+    .article-image-likebtn {
+        position: absolute;
+        top: 7%;
+        right: 7%;
+        background-color: #272727;
+        border: none;
+        border-radius: 25px;
+        width: 50px;
+    }
+
+    .article-image-style {
+        width: 100%;
+        height: auto;
+    }
 }
+
 .article-block {
     background-color: #505b4e;
     position: absolute;
@@ -146,5 +166,17 @@
     }
 }
 
-
+// for page AdventuresArticlesList
+.adventures-article-content {
+    position: relative;
+    overflow: visible;
+}
+.adventures-article-block {
+    background-color: #505b4e;
+    position: absolute;
+    width: 80%;
+    top: 85%;
+    left: 10%;
+    z-index: 2;
+}
 

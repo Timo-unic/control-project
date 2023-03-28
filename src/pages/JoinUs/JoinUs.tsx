@@ -4,6 +4,7 @@ import joinusgrad from 'assets/join-gradient.png'
 import iconusefulinfo from 'assets/contact-icon.png'
 import PhoneIcon from '@mui/icons-material/Phone'
 import EmailIcon from '@mui/icons-material/Email'
+import SubmitForm from 'components/SubmitComponents/SubmitForm'
 
 type Props = {}
 
@@ -45,7 +46,7 @@ const JoinUs = (props: Props) => {
                             </div>
                         </div>
                         <div className="joinus-main-submit-form">
-                            form submit
+                            <SubmitForm />
                         </div>
                     </div>
                     <div className="joinus-main-useful">

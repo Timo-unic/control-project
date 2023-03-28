@@ -3,6 +3,10 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import './PlacesHome.scss'
 import { Link } from 'react-router-dom'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { addLike, removeLike } from 'redux/likeReducer'
 
 type Props = {
     id: number
@@ -23,7 +27,6 @@ const PlacesHomeArticlesList = ({
     date,
     image,
 }: Props) => {
-
     const scrollUp = () => {
         window.scrollTo({
             top: 0,
@@ -31,23 +34,50 @@ const PlacesHomeArticlesList = ({
         })
     }
 
+    const isLiked = useAppSelector((state) => state.articlesLikeState[id])
+
+    const dispatch = useAppDispatch()
+
     return (
         <Card variant="outlined" className="places-content">
             <CardContent>
                 <div className="places-image">
+                    <Button
+                        variant="outlined"
+                        className="article-image-likebtn"
+                        onClick={() =>
+                            isLiked
+                                ? dispatch(removeLike(id))
+                                : dispatch(addLike(id))
+                        }
+                    >
+                        {isLiked ? (
+                            <FavoriteIcon sx={{ color: 'white' }} />
+                        ) : (
+                            <FavoriteBorderIcon sx={{ color: 'white' }} />
+                        )}
+                    </Button>
                     <img src={image} alt="" className="places-image-style" />
                 </div>
             </CardContent>
             <CardContent className="places-block">
                 <CardActions>
-                    <Button variant="outlined" className="places-btn" onClick={scrollUp}>
+                    <Button
+                        variant="outlined"
+                        className="places-btn"
+                        onClick={scrollUp}
+                    >
                         <Link to="/places" className="places-btn-link">
                             {category}
                         </Link>
                     </Button>
                 </CardActions>
                 <div className="places-title">
-                    <Link to={`/articles/${id}`} className="places-title-link" onClick={scrollUp}>
+                    <Link
+                        to={`/articles/${id}`}
+                        className="places-title-link"
+                        onClick={scrollUp}
+                    >
                         {title}
                     </Link>
                 </div>
