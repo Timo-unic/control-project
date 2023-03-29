@@ -9,6 +9,7 @@ import lady from 'assets/about-lady.jpg'
 import minilady from 'assets/home-mini-lady.png'
 import iconquotes from 'assets/about-quotes.png'
 import { Container } from '@mui/system'
+import Reviews from 'components/Reviews/Reviews'
 
 type Props = {}
 
@@ -106,6 +107,7 @@ const About = (props: Props) => {
                         </div>
                     </div>
                 </Container>
+                <Reviews />
             </Container>
             <JoinUsHome />
         </>
