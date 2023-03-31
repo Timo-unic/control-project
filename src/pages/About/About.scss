@@ -59,6 +59,13 @@
         .about-section-link {
             font-size: 18px;
             font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: #ac8a63;
+            color: #fff;
+
+            &:hover {
+                color: #ac8a63;
+            }
         }
     }
     .about-image-section {

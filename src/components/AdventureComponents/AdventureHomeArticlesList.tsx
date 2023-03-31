@@ -10,6 +10,7 @@ import { addLike, removeLike } from 'redux/likeReducer'
 
 type Props = {
     id: number
+    linkpage: string
     category: string
     title: string
     paragraph: string
@@ -20,6 +21,7 @@ type Props = {
 
 const AdventureHomeArticlesList = ({
     id,
+    linkpage,
     category,
     title,
     paragraph,
@@ -66,7 +68,7 @@ const AdventureHomeArticlesList = ({
                             className="article-btn"
                             onClick={scrollUp}
                         >
-                            <Link to="/adventures" className="article-btn-link">
+                            <Link to={linkpage} className="article-btn-link">
                                 {category}
                             </Link>
                         </Button>

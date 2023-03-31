@@ -10,10 +10,18 @@ import minilady from 'assets/home-mini-lady.png'
 import iconquotes from 'assets/about-quotes.png'
 import { Container } from '@mui/system'
 import Reviews from 'components/Reviews/Reviews'
+import { Link } from 'react-router-dom'
 
 type Props = {}
 
 const About = (props: Props) => {
+    const scrollUp = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
+    }
+
     return (
         <>
             <Typography variant="h3" component="div" className="about-title-bg">
@@ -37,7 +45,15 @@ const About = (props: Props) => {
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit, sed do eiusmod tempor incididunt ut labor
                     </div>
-                    <div className="about-section-link">Discover more</div>
+                    <div className="about-section-link">
+                        <Link
+                            to={'/about'}
+                            className="about-section-link"
+                            onClick={scrollUp}
+                        >
+                            Discover more
+                        </Link>
+                    </div>
                 </div>
                 <img
                     src={aboutimagesection}
