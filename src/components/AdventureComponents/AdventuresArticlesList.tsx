@@ -1,7 +1,7 @@
 import { Button, Card, CardActions, CardContent } from '@mui/material'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
-import './AdventureHome.scss'
+// import './AdventureHome.scss'
 import { Link } from 'react-router-dom'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
@@ -40,8 +40,8 @@ const AdventuresArticlesList = ({
 
     return (
         <Card variant="outlined" className="adventures-article-content">
-            <CardContent>
-                <div className="article-image">
+            <CardContent className="adventures-article-container">
+                <div className="adventures-article-image">
                     <Button
                         variant="outlined"
                         className="article-image-likebtn"
@@ -57,47 +57,53 @@ const AdventuresArticlesList = ({
                             <FavoriteBorderIcon sx={{ color: 'white' }} />
                         )}
                     </Button>
-                    <img src={image} alt="" className="article-image-style" />
+                    <img
+                        src={image}
+                        alt=""
+                        className="adventures-article-image-style"
+                    />
                 </div>
-            </CardContent>
-            <CardContent className="adventures-article-block">
-                <CardActions>
-                    <Button
-                        variant="outlined"
-                        className="article-btn"
-                        onClick={scrollUp}
-                    >
-                        <Link to="/adventures" className="article-btn-link">
-                            {category}
-                        </Link>
-                    </Button>
-                </CardActions>
-                <div className="article-title">
-                    <Link
-                        to={`/articles/${id}`}
-                        className="article-title-link"
-                        onClick={scrollUp}
-                    >
-                        {title}
-                    </Link>
-                </div>
-                <div className="article-paragraph">{paragraph}</div>
-                <div className="article-footer">
-                    <div className="article-footer-blogger">
-                        <AccountCircleIcon color="action" />
-                        <span className="article-footer-style">
-                            <Link
-                                to={`/author/muffin`}
-                                className="group-muffin-link"
-                                onClick={scrollUp}
-                            >
-                                {author}
+                <div className="adventures-article-block">
+                    <CardActions>
+                        <Button
+                            variant="outlined"
+                            className="adventures-article-btn"
+                            onClick={scrollUp}
+                        >
+                            <Link to="/adventures" className="article-btn-link">
+                                {category}
                             </Link>
-                        </span>
+                        </Button>
+                    </CardActions>
+                    <div className="adventures-article-title">
+                        <Link
+                            to={`/articles/${id}`}
+                            className="article-title-link"
+                            onClick={scrollUp}
+                        >
+                            {title}
+                        </Link>
                     </div>
-                    <div className="article-footer-date">
-                        <AccessTimeIcon />
-                        <span className="article-footer-style">{date}</span>
+                    <div className="adventures-article-paragraph">
+                        {paragraph}
+                    </div>
+                    <div className="adventures-article-footer">
+                        <div className="article-footer-blogger">
+                            <AccountCircleIcon color="action" />
+                            <span className="article-footer-style">
+                                <Link
+                                    to={`/author/muffin`}
+                                    className="group-muffin-link"
+                                    onClick={scrollUp}
+                                >
+                                    {author}
+                                </Link>
+                            </span>
+                        </div>
+                        <div className="article-footer-date">
+                            <AccessTimeIcon />
+                            <span className="article-footer-style">{date}</span>
+                        </div>
                     </div>
                 </div>
             </CardContent>

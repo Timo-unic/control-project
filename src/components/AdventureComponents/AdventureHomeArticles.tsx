@@ -29,19 +29,16 @@ const AdventureHomeArticles = (props: Props) => {
                     {articlesArray
                         .filter((article) => article.category === 'Adventures')
                         .map(
-                            (
-                                {
-                                    id,
-                                    category,
-                                    title,
-                                    paragraph,
-                                    author,
-                                    date,
-                                    image,
-                                },
-                                i
-                            ) => (
-                                <Grid item xs={12} sm={6} key={i}>
+                            ({
+                                id,
+                                category,
+                                title,
+                                paragraph,
+                                author,
+                                date,
+                                image,
+                            }) => (
+                                <Grid item xs={12} sm={6} key={id}>
                                     <AdventureHomeArticlesList
                                         id={id}
                                         category={category}

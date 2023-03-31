@@ -18,7 +18,6 @@ const PlacesHomeArticles = (props: Props) => {
                     className="section-places-title"
                 >
                     <span>
-                        {' '}
                         <img src={placeicon} alt="placeicon" />
                     </span>
                     <span className="section-places-title-text">Places</span>
@@ -40,19 +39,16 @@ const PlacesHomeArticles = (props: Props) => {
                             }) => category === 'Places'
                         )
                         .map(
-                            (
-                                {
-                                    id,
-                                    category,
-                                    title,
-                                    paragraph,
-                                    author,
-                                    date,
-                                    image,
-                                },
-                                i
-                            ) => (
-                                <Grid item xs={12} sm={4} key={i}>
+                            ({
+                                id,
+                                category,
+                                title,
+                                paragraph,
+                                author,
+                                date,
+                                image,
+                            }) => (
+                                <Grid item xs={12} sm={4} key={id}>
                                     <PlacesHomeArticlesList
                                         id={id}
                                         category={category}

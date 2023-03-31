@@ -78,11 +78,13 @@ const About = (props: Props) => {
                         </p>
                     </div>
                     <div className="about-topic-rightfield">
-                        <img
-                            src={lady}
-                            alt="lady"
-                            className="about-topic-image"
-                        />
+                        <div className="about-topic-content-image">
+                            <img
+                                src={lady}
+                                alt="lady"
+                                className="about-topic-image"
+                            />
+                        </div>
                         <div>
                             <img src={iconquotes} alt="iconquotes" />
                             <p className="about-topic-review-text">

@@ -12,7 +12,8 @@ const PlacesArticles = (props: Props) => {
             <Container maxWidth="md" className="category-article-container">
                 <Grid container spacing={40}>
                     {articlesArray
-                        .filter(
+                        .filter((article) => article.category === 'Places')
+                        .map(
                             ({
                                 id,
                                 category,
@@ -21,22 +22,8 @@ const PlacesArticles = (props: Props) => {
                                 author,
                                 date,
                                 image,
-                            }) => category === 'Places'
-                        )
-                        .map(
-                            (
-                                {
-                                    id,
-                                    category,
-                                    title,
-                                    paragraph,
-                                    author,
-                                    date,
-                                    image,
-                                },
-                                i
-                            ) => (
-                                <Grid item xs={12} sm={12} key={i}>
+                            }) => (
+                                <Grid item xs={12} sm={12} key={id}>
                                     <PlacesArticlesList
                                         id={id}
                                         category={category}

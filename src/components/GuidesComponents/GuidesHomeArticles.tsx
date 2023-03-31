@@ -18,7 +18,6 @@ const GuidesHomeArticles = (props: Props) => {
                     className="section-guides-title"
                 >
                     <span>
-                        {' '}
                         <img src={guideicon} alt="guideicon" />
                     </span>
                     <span className="section-guides-title-text">Guides</span>
@@ -40,19 +39,16 @@ const GuidesHomeArticles = (props: Props) => {
                             }) => category === 'Guides'
                         )
                         .map(
-                            (
-                                {
-                                    id,
-                                    category,
-                                    title,
-                                    paragraph,
-                                    author,
-                                    date,
-                                    image,
-                                },
-                                i
-                            ) => (
-                                <Grid item xs={12} sm={4} key={i}>
+                            ({
+                                id,
+                                category,
+                                title,
+                                paragraph,
+                                author,
+                                date,
+                                image,
+                            }) => (
+                                <Grid item xs={12} sm={4} key={id}>
                                     <GuidesHomeArticlesList
                                         id={id}
                                         category={category}

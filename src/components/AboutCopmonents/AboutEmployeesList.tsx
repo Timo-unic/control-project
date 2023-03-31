@@ -1,5 +1,6 @@
 import { Card, CardActions, CardContent } from '@mui/material'
 import TwitterIcon from '@mui/icons-material/Twitter'
+import { Link } from 'react-router-dom'
 
 type Props = {
     photo: string
@@ -31,23 +32,33 @@ const AboutEmployeesList = ({
                 <div className="about-employees-line"></div>
                 <div className="about-employees-textperson">{textperson}</div>
                 <CardActions className="about-employees-field-btns">
-                    <button
-                        className="about-employees-btn-fb"
-                        onClick={() => ({ socialf })}
-                    >
-                        f
+                    <button className="about-employees-btn-fb">
+                        <Link
+                            to={socialf}
+                            className="about-employees-btn-fb-link"
+                        >
+                            f
+                        </Link>
                     </button>
-                    <button
-                        className="about-employees-btn-tw"
-                        onClick={() => ({ socialt })}
-                    >
-                        <TwitterIcon />
+                    <button className="about-employees-btn-tw">
+                        <Link
+                            to={socialt}
+                            className="about-employees-btn-tw-link"
+                        >
+                            <TwitterIcon />
+                        </Link>
                     </button>
                     <button
                         className="about-employees-btn-in"
                         onClick={() => ({ socialin })}
                     >
-                        in
+                        <Link
+                            to={socialin}
+                            className="about-employees-btn-in-link"
+                        >
+                            {' '}
+                            in
+                        </Link>
                     </button>
                 </CardActions>
             </CardContent>

@@ -35,11 +35,12 @@ const AdventureHomeArticlesList = ({
     }
 
     const isLiked = useAppSelector((state) => state.articlesLikeState[id])
+
     const dispatch = useAppDispatch()
 
     return (
         <Card variant="outlined" className="article-content">
-            <CardContent>
+            <CardContent className="article-container">
                 <div className="article-image">
                     <Button
                         variant="outlined"
@@ -58,45 +59,45 @@ const AdventureHomeArticlesList = ({
                     </Button>
                     <img src={image} alt="" className="article-image-style" />
                 </div>
-            </CardContent>
-            <CardContent className="article-block">
-                <CardActions>
-                    <Button
-                        variant="outlined"
-                        className="article-btn"
-                        onClick={scrollUp}
-                    >
-                        <Link to="/adventures" className="article-btn-link">
-                            {category}
-                        </Link>
-                    </Button>
-                </CardActions>
-                <div className="article-title">
-                    <Link
-                        to={`/articles/${id}`}
-                        className="article-title-link"
-                        onClick={scrollUp}
-                    >
-                        {title}
-                    </Link>
-                </div>
-                <div className="article-paragraph">{paragraph}</div>
-                <div className="article-footer">
-                    <div className="article-footer-blogger">
-                        <AccountCircleIcon color="action" />
-                        <span className="article-footer-style">
-                            <Link
-                                to={`/author/muffin`}
-                                className="group-muffin-link"
-                                onClick={scrollUp}
-                            >
-                                {author}
+                <div className="article-block">
+                    <CardActions>
+                        <Button
+                            variant="outlined"
+                            className="article-btn"
+                            onClick={scrollUp}
+                        >
+                            <Link to="/adventures" className="article-btn-link">
+                                {category}
                             </Link>
-                        </span>
+                        </Button>
+                    </CardActions>
+                    <div className="article-title">
+                        <Link
+                            to={`/articles/${id}`}
+                            className="article-title-link"
+                            onClick={scrollUp}
+                        >
+                            {title}
+                        </Link>
                     </div>
-                    <div className="article-footer-date">
-                        <AccessTimeIcon />
-                        <span className="article-footer-style">{date}</span>
+                    <div className="article-paragraph">{paragraph}</div>
+                    <div className="article-footer">
+                        <div className="article-footer-blogger">
+                            <AccountCircleIcon color="action" />
+                            <span className="article-footer-style">
+                                <Link
+                                    to={`/author/muffin`}
+                                    className="group-muffin-link"
+                                    onClick={scrollUp}
+                                >
+                                    {author}
+                                </Link>
+                            </span>
+                        </div>
+                        <div className="article-footer-date">
+                            <AccessTimeIcon />
+                            <span className="article-footer-style">{date}</span>
+                        </div>
                     </div>
                 </div>
             </CardContent>

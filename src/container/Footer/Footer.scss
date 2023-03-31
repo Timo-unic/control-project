@@ -4,16 +4,19 @@
     background-color: #363f36;
     color: #d1d2d1;
     font-size: 18px;
-}
-.footer-logo {
-    margin-top: 90px;
-}
-.footer-text {
-    margin: 30px 0;
-}
-.footer-text-mark {
-    color: #ac8a62;
-}
-.footer-rights {
-    padding: 25px 0;
+
+    .footer-logo {
+        margin-top: 90px;
+    }
+    .footer-text {
+        margin: 30px 0;
+    }
+    
+    .footer-rights {
+        padding: 25px 0;
+    
+        .footer-text-mark {
+            color: #ac8a62;
+        }
+    }
 }

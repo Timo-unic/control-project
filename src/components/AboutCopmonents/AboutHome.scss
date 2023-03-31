@@ -1,3 +1,5 @@
+
+// for AboutHome
 .about-home-content {
     background-color: #efeeea;
     display: flex;
@@ -34,12 +36,101 @@
                     flex-direction: column;
                     margin: 0 10px;
                     font-weight: 700;
+
+                    .about-topic-review-link {
+                        text-decoration-color: #ac8a62;
+                        color: inherit;
+    
+                        &:hover {
+                            text-decoration: none;
+                            color: #ac8a62;
+                        }
+                    }
+                    .about-topic-review-mail {
+                        font-weight: 300;
+                    }
                 }
-                .about-topic-review-mail {
-                    font-weight: 300;
-                }
+
             }
         }
     }
+}
 
+// for AboutEmployees
+.about-employees-container {
+    background-color: #e2e0dc;
+
+    .about-employees-container-content {
+        padding-bottom: 50px;
+
+        .about-employees-title {
+            text-align: center;
+            padding-top: 120px;
+            padding-bottom: 30px;
+            color: #504840;
+            font-size: 50px;
+            line-height: 64px;
+            font-weight: 700;
+        }
+    }
+}
+
+// for AboutEmployeesList
+.about-employees-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: #504840;
+    background-color: #e2e0dc;
+
+    .about-employees-photo-field {
+        align-items: center;
+        margin-bottom: 15px;
+
+        .about-employees-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+    }
+    .about-employees-name {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .about-employees-line {
+        width: 130px;
+        margin: 20px 0;
+        border-top: 1px solid #504840;
+    }
+    .about-employees-textperson {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .about-employees-btn-fb,
+    .about-employees-btn-tw,
+    .about-employees-btn-in {
+        width: 43px;
+        height: 43px;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        background-color: #fff;
+
+        .about-employees-btn-fb-link,
+        .about-employees-btn-tw-link,
+        .about-employees-btn-in-link {
+            text-decoration: none;
+            color: #444;
+
+            &:hover {
+                color: #ac8a62;
+                text-decoration: underline;
+            }
+        }
+    }
 }

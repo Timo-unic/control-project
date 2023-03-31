@@ -4,7 +4,6 @@ import {
     CardContent,
     TextareaAutosize,
     TextField,
-    Typography,
 } from '@mui/material'
 import { useState } from 'react'
 import './Reviews.scss'
@@ -70,39 +69,42 @@ const Reviews = (props: Props) => {
 
     return (
         <>
-            <form onSubmit={onSend} className='reviews-form' >
+            <form onSubmit={onSend} className="reviews-form">
                 <h3>Please leave a review</h3>
-                <div className='reviews-form-name'>
+                <div className="reviews-form-name">
                     <TextField
                         label="Name"
                         size="small"
-                        className='reviews-form-name-field'
+                        className="reviews-form-name-field"
                         value={newReview.name}
                         onChange={handleName}
                     />
                 </div>
-                <div className='reviews-form-text'>
+                <div className="reviews-form-text">
                     <TextareaAutosize
                         minRows={5}
                         placeholder="Text"
-                        className='reviews-form-name-field'
+                        className="reviews-form-name-field"
                         value={newReview.text}
                         onChange={handleText}
                     />
                 </div>
-                <Button variant="contained" type="submit" className='reviews-form-btn'>
+                <Button
+                    variant="contained"
+                    type="submit"
+                    className="reviews-form-btn"
+                >
                     Send
                 </Button>
             </form>
             {reviews.map((item, i) => (
                 <Card variant="outlined" sx={{ margin: '20px 250px' }} key={i}>
-                    <CardContent className='review-style'>
-                        <div className='review-style-name'>{item.name}:</div>
-                        <div className='review-style-text'>{item.text}</div>
+                    <CardContent className="review-style">
+                        <div className="review-style-name">{item.name}:</div>
+                        <div className="review-style-text">{item.text}</div>
                     </CardContent>
                 </Card>
             ))}
-            
         </>
     )
 }
