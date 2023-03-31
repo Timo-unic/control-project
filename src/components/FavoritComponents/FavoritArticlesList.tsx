@@ -1,7 +1,7 @@
 import { Button, Card, CardActions, CardContent } from '@mui/material'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
-import './PlacesHome.scss'
+import './FavoritArticles.scss'
 import { Link } from 'react-router-dom'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
@@ -19,7 +19,7 @@ type Props = {
     image: string
 }
 
-const PlacesArticlesList = ({
+const FavoritArticlesList = ({
     id,
     linkpage,
     category,
@@ -107,4 +107,4 @@ const PlacesArticlesList = ({
     )
 }
 
-export default PlacesArticlesList
+export default FavoritArticlesList

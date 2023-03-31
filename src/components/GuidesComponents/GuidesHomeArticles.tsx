@@ -30,6 +30,7 @@ const GuidesHomeArticles = (props: Props) => {
                         .filter(
                             ({
                                 id,
+                                linkpage,
                                 category,
                                 title,
                                 paragraph,
@@ -41,6 +42,7 @@ const GuidesHomeArticles = (props: Props) => {
                         .map(
                             ({
                                 id,
+                                linkpage,
                                 category,
                                 title,
                                 paragraph,
@@ -51,6 +53,7 @@ const GuidesHomeArticles = (props: Props) => {
                                 <Grid item xs={12} sm={4} key={id}>
                                     <GuidesHomeArticlesList
                                         id={id}
+                                        linkpage={linkpage}
                                         category={category}
                                         title={title}
                                         paragraph={paragraph}

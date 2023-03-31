@@ -31,6 +31,7 @@ const AdventureHomeArticles = (props: Props) => {
                         .map(
                             ({
                                 id,
+                                linkpage,
                                 category,
                                 title,
                                 paragraph,
@@ -41,6 +42,7 @@ const AdventureHomeArticles = (props: Props) => {
                                 <Grid item xs={12} sm={6} key={id}>
                                     <AdventureHomeArticlesList
                                         id={id}
+                                        linkpage={linkpage}
                                         category={category}
                                         title={title}
                                         paragraph={paragraph}

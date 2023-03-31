@@ -1,4 +1,4 @@
-// for AdventureHomeArticles
+// for AdventureHomeSection
 .section-adv-container {
     background-image: url(/assets/home-top-adventute-bg.png);
 
@@ -40,6 +40,10 @@
         .section-adv-home-link-style {
             color: #fff;
             text-decoration-color: #ac8a62;
+
+            &:hover {
+                color: #ac8a62;
+            }
         }
     }
 }

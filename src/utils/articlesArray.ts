@@ -1,5 +1,6 @@
 export type Article = {
     id: number
+    linkpage: string
     category: string
     title: string
     paragraph: string
@@ -13,6 +14,7 @@ export type Article = {
 const articlesArray:Article[] = [
     {
         id: 1,
+        linkpage: "/adventures",
         category: "Adventures",
         title: "Donec tempor pur",
         paragraph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquum.",
@@ -24,6 +26,7 @@ const articlesArray:Article[] = [
     },
     {
         id: 2,
+        linkpage: "/adventures",
         category: "Adventures",
         title: "Fusce nec orcio",
         paragraph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquum.",
@@ -35,6 +38,7 @@ const articlesArray:Article[] = [
     },
     {
         id: 3,
+        linkpage: "/places",
         category: "Places",
         title: "Nam tincidunt metus",
         paragraph: "",
@@ -46,6 +50,7 @@ const articlesArray:Article[] = [
     },
     {
         id: 4,
+        linkpage: "/places",
         category: "Places",
         title: "Fusce sagittis risus a urna",
         paragraph: "",
@@ -57,6 +62,7 @@ const articlesArray:Article[] = [
     },
     {
         id: 5,
+        linkpage: "/places",
         category: "Places",
         title: "Vestibulum sollicitudin est",
         paragraph: "",
@@ -68,6 +74,7 @@ const articlesArray:Article[] = [
     },
     {
         id: 6,
+        linkpage: "/guides",
         category: "Guides",
         title: "Ut sodales nunc eu",
         paragraph: "",
@@ -79,6 +86,7 @@ const articlesArray:Article[] = [
     },
     {
         id: 7,
+        linkpage: "/guides",
         category: "Guides",
         title: "Maecenas congue augue",
         paragraph: "",
@@ -90,6 +98,7 @@ const articlesArray:Article[] = [
     },
     {
         id: 8,
+        linkpage: "/guides",
         category: "Guides",
         title: "Aliquam mollis purus",
         paragraph: "",
