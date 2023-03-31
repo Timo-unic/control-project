@@ -1,0 +1,72 @@
+
+.joinus-form-content {
+    width: 650px;
+    height: 550px;
+    background-color: #5c5149;
+    padding: 50px 30px 0;
+    display: flex;
+    flex-direction: column;
+
+    .joinus-form-message,
+    .joinus-form-details,
+    .joinus-form-section-subject,
+    .joinus-form-section-mail,
+    .joinus-form-name {
+        max-width: 100%;
+        background-color: rgba(106,94,85,1);
+        padding: 10px;
+        margin-bottom: 15px;
+
+        .joinus-form-message-field,
+        .joinus-form-details-field,
+        .joinus-form-subject-field,
+        .joinus-form-mail-field,
+        .joinus-form-name-field {
+            display: block;
+            width: 100%;
+            background-color: rgba(106,94,85,1);
+            color: #c0bcb9;
+            border-color: #EBEBEB;
+            resize: none;
+            outline: none;
+            border-style: solid;
+            font-size: 14px;
+            border-width: 0;
+
+            &::placeholder {
+                color: #c0bcb9;
+            }
+        }
+    }
+    .joinus-form-section {
+        display: flex;
+        width: 100%;
+
+        .joinus-form-section-mail {
+            width: 50%;
+            margin-right: 10px;
+        }
+        .joinus-form-section-subject {
+            width: 50%;
+            margin-left: 10px;
+        }
+    }
+    .joinus-form-btn {
+        display: flex;
+        width: 100%;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        background-color: #ac8a63;
+        color: #ffffff;
+        cursor: pointer;
+        overflow: hidden;
+        font-size: inherit;
+    }
+}
+.joinus-form-message-callback {
+    color: #c69f74;
+    margin: 50px 150px;
+    font-size: 18px;
+}

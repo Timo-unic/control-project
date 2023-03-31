@@ -1,0 +1,113 @@
+.joinus-title-bg {
+    background-image: url(/assets/join-main-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    height: 700px;
+    
+    .joinus-title-content {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        .joinus-title {
+            color: #fff;
+            font-size: 50px;
+            line-height: 64px;
+            font-weight: 700;
+        }
+        .joinus-title-phone {
+            color: #ac8a63;
+            font-size: 50px;
+            line-height: 64px;
+        }
+        .joinus-title-text {
+            color: #fff;
+            font-size: initial;
+            line-height: 25px;
+        }
+    }
+}
+.joinus-main-bg {
+    background-color: #443e3b;
+    position: relative;
+
+    .joinus-main-bg-grad {
+        position: absolute;
+        top: -220px;
+    }
+    .joinus-main-submit {
+        display: flex;
+        margin-bottom: 70px;
+
+        .joinus-main-submit-title {
+            color: #fff;
+            width: 33.333%;
+            font-size: 38px;
+            line-height: 47px;
+            font-weight: 700;
+            margin-bottom: 20px;
+
+            .joinus-main-submit-text {
+                color: #fff;
+                font-size: initial;
+                line-height: 25px;
+                font-weight: initial;
+                padding-top: 20px;
+            }
+        }
+    }
+    .joinus-main-useful {
+        display: flex;
+        color: #ac8a63;
+        font: inherit;
+        vertical-align: baseline;
+        font-weight: 700;
+        width: 100%;
+        padding-bottom: 100px;
+
+        .joinus-main-info {
+            margin-right: 100px;
+
+            .joinus-main-info-title {
+                color: #fff;
+                font-size: 50px;
+                line-height: 64px;
+                margin-bottom: 30px;
+            }
+            .joinus-main-info-item {
+                display: flex;
+                align-items: center;
+                padding: 10px 0;
+
+                .joinus-main-useful-text {
+                    display: inline-block;
+                    margin-left: 15px;
+                } 
+            }
+        }
+        .joinus-main-contacts {
+            margin-right: 100px;
+            margin-left: 100px;
+
+            .joinus-main-contacts-title {
+                color: #fff;
+                font-size: 50px;
+                line-height: 64px;
+                margin-bottom: 30px;
+            }
+            .joinus-main-contacts-text {
+                color: #fff;
+                font-weight: initial;
+                padding: 0 100px 30px 0;
+            }
+            .joinus-main-contacts-icon {
+                display: flex;
+                margin: 15px 0;
+            }    
+        }
+    }
+}
